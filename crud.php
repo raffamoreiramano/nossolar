@@ -119,7 +119,7 @@ if (isset($_POST['comentario']) && isset($_POST['produto'])) {
     if (empty($_POST['comentario'])) {
         $mensagem['codigo'] = 2;
         $mensagem['texto'] = 'Comentário vazio!';
-    } elseif (strlen($_POST) >= $limite) {
+    } elseif (strlen($_POST['comentario']) >= $limite) {
         $mensagem['codigo'] = 2;
         $mensagem['texto'] = 'Fala muito!';
     } else {
@@ -148,7 +148,7 @@ if (isset($_POST['resposta']) && isset($_POST['comentario_alvo'])) {
     if (empty($_POST['resposta'])) {
         $mensagem['codigo'] = 2;
         $mensagem['texto'] = 'Resposta vazia!';
-    } elseif (strlen($_POST) >= $limite) {
+    } elseif (strlen($_POST['resposta']) >= $limite) {
         $mensagem['codigo'] = 2;
         $mensagem['texto'] = 'Fala muito!';
     } else {
